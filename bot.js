@@ -11,7 +11,7 @@ var T = new Twit({
 // This is the URL of a search for the latest tweets that include the phrase "for the record".
 var recordSearch = {q: '"for the record"', count: 10, result_type: "recent"}; 
 
-// This function finds the latest tweet with the #mediaarts hashtag, and retweets it.
+// This function finds the latest tweet with the text 'for the record', and retweets it.
 function retweetLatest() {
 	T.get('search/tweets', recordSearch, function (error, data) {
 	  // log out any errors and responses
