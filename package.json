@@ -1,0 +1,41 @@
+{
+  "name": "For The Record Bot",
+  "description": "A bot to note things for the record",
+  "version": "0.1.0",
+  "homepage": "https://github.com/fortherecordbot/fortherecordbot",
+  "author": {
+    "name": "",
+    "email": "fortherecordbot@gmail.com",
+    "url": "fortherecordbot.com"
+  },
+  "scripts" : {"start" : "node bot.js"},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fortherecordbot/fortherecordbot.git"
+  },
+  "main": "Bot.js",
+  "bugs": {
+    "url": "https://github.com/fortherecordbot/fortherecordbot/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/fortherecordbot/fortherecordbot/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "dependencies": {
+    "node-restclient": "0.0.1",
+    "request": "~2.44.0",
+    "rita": "~1.0.951",
+    "twit": "~1.1.19"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt-notify": "~0.2.18"
+  },
+  "keywords": []
+}
