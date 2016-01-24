@@ -19,10 +19,12 @@ function retweetLatest() {
 	  // If our search request to the server had no errors...
 	  if (!error) {
 	  	// ...then we grab the ID of the tweet we want to retweet...
-		var retweetId = data.statuses[0].id_str;
-		var tweeter = data.statuses[0].user.screen_name
-		var tweetURL = "https://twitter.com/"+ tweeter+ "/status/" + retweetId;
-		var myTweet = "It's been noted for the record #fortherecord " + tweetURL;
+	  	var tweet = data.statuses[0];
+		var retweetBody = 'It\'s been noted for the record #fortherecord RT @' + tweet.user.screen_name + ' ' + tweet.text;
+		// var retweetId = data.statuses[0].id_str;
+		// var tweeter = data.statuses[0].user.screen_name
+		// var tweetURL = "https://twitter.com/"+ tweeter+ "/status/" + retweetId;
+		// var myTweet = "It's been noted for the record #fortherecord " + tweetURL;
 		// ...and then we tell Twitter we want to retweet it!
 		T.post('statuses/update/', { status: myTweet }, function (err, reply) {
 			if (err) {
