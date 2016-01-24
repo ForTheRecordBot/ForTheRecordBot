@@ -20,15 +20,15 @@ function retweetLatest() {
 		var tweetURL = "https://twitter.com/"+ tweeter+ "/status/" + retweetId;
 		var myTweet = "It's been noted for the record #fortherecord " + tweetURL;
 		// ...and then we tell Twitter we want to retweet it!
-		// T.post('statuses/update/', { status: myTweet }, function (error, response) {
-		// 	if (response) {
-		// 		console.log('Success! Check your bot, it should have retweeted something.')
-		// 	}
-		// 	// If there was an error with our Twitter call, we print it out here.
-		// 	if (error) {
-		// 		console.log('There was an error with Twitter:', error);
-		// 	}
-		// })
+		T.post('statuses/update/', { status: myTweet }, function (error, response) {
+			if (response) {
+				console.log('Success! Check your bot, it should have retweeted something.')
+			}
+			// If there was an error with our Twitter call, we print it out here.
+			if (error) {
+				console.log('There was an error with Twitter:', error);
+			}
+		})
 		console.log(myTweet);
 	  }
 	  // However, if our original search request had an error, we want to print it out here.
