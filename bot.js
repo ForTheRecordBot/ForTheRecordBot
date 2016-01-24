@@ -2,8 +2,12 @@
 var Twit = require('twit');
 
 // We need to include our configuration file
-var T = new Twit(require('./config.js'));
-
+var T = new Twit({
+  consumer_key:         (process.env.consumer_key || require('./config.js').consumer_key),
+  consumer_secret:      (process.env.consumer_secret || require('./config.js').consumer_secret),
+  access_token:          (process.env.access_token || require('./config.js').access_token),
+  access_token_secret:   (process.env.access_token_secret || require('./config.js').access_token_secret)
+});
 // This is the URL of a search for the latest tweets that include the phrase "for the record".
 var recordSearch = {q: '"for the record"', count: 10, result_type: "recent"}; 
 
