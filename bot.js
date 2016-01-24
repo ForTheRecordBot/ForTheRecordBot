@@ -34,7 +34,7 @@ function retweetLatest() {
           		console.log('tweet:', reply);
        		}
 		})
-		console.log(myTweet);
+		console.log(retweetBody);
 	  }
 	  // However, if our original search request had an error, we want to print it out here.
 	  else {
