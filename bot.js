@@ -26,7 +26,7 @@ function retweetLatest() {
 		// var tweetURL = "https://twitter.com/"+ tweeter+ "/status/" + retweetId;
 		// var myTweet = "It's been noted for the record #fortherecord " + tweetURL;
 		// ...and then we tell Twitter we want to retweet it!
-		T.post('statuses/update/', { status: myTweet }, function (err, reply) {
+		T.post('statuses/update/', { status: retweetBody }, function (err, reply) {
 			if (err) {
          		console.log('error:', err);
       		}
