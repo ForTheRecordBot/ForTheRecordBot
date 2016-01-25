@@ -9,7 +9,7 @@ var T = new Twit({
   access_token_secret:   (process.env.access_token_secret || require('./config.js').access_token_secret)
 });
 // This is the URL of a search for the latest tweets that include the phrase "for the record".
-var recordSearch = {q: '"for the record"', count: 10, result_type: "recent"}; 
+var recordSearch = {q: '"for the record"', count: 30, result_type: "recent"}; 
 
 // This function finds the latest tweet with the text 'for the record', and retweets it.
 function retweetLatest() {
