@@ -9,7 +9,7 @@ var T = new Twit({
   access_token_secret:   (process.env.access_token_secret || require('./config.js').access_token_secret)
 });
 // This is the URL of a search for the latest tweets that include the phrase "for the record".
-var recordSearch = {q: '"for the record"', count: 500, result_type: "recent"}; 
+var recordSearch = {q: '"for the record"', count: 100, result_type: "recent"}; 
 
 // This function finds the latest tweet with the text 'for the record', and retweets it.
 function retweetLatest() {
@@ -48,4 +48,4 @@ function retweetLatest() {
 retweetLatest();
 // ...and then every hour after that. Time here is in milliseconds, so
 // 1000 ms = 1 second, 1 sec * 60 = 1 min, 1 min * 60 = 1 hour --> 1000 * 60 * 60
-setInterval(retweetLatest, 1000 * 60 * 1);
+setInterval(retweetLatest, 1000 * 60 * 10);
